@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AyurVeda Nexus - Future of Ayurveda</title>
+    <meta name="description" content="Experience authentic Ayurveda through quantum technology and neural interfaces">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader-inner">
+                <div class="loader-circle"></div>
+                <div class="loader-circle"></div>
+                <div class="loader-circle"></div>
+            </div>
+            <p>Initializing Quantum Interface...</p>
+        </div>
+    </div>
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>AyurVeda <span>Nexus</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/ayurveda_shop/index.html" class="active">Home</a></li>
+                <li><a href="/ayurveda_shop/shop.html">Shop</a></li>
+                <li><a href="/ayurveda_shop/about.html">About</a></li>
+                <li><a href="/ayurveda_shop/contact.html">Contact</a></li>
+                <li class="nav-cart">
+                    <a href="#" class="cart-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-background">
+                <div class="particle-field" id="particleField"></div>
+                <div class="holographic-herbs"></div>
+                <div class="quantum-grid"></div>
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title">The Future of Ayurveda is Here</h1>
+                <p class="hero-subtitle">Experience authentic Ayurveda through quantum technology and neural interfaces</p>
+                <div class="hero-cta">
+                    <button class="cta-button primary" id="beginJourney">Begin Your Journey</button>
+                    <button class="cta-button secondary" id="watchDemo">Watch Demo</button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="50000">0</span>
+                        <span class="stat-label">Happy Customers</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="150">0</span>
+                        <span class="stat-label">Ayurvedic Products</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="25">0</span>
+                        <span class="stat-label">Expert Vaidyas</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="holographic-display">
+                    <div class="hologram-container">
+                        <div class="hologram-3d" id="hologram3d">
+                            <div class="hologram-face"></div>
+                            <div class="hologram-face"></div>
+                            <div class="hologram-face"></div>
+                            <div class="hologram-face"></div>
+                            <div class="hologram-face"></div>
+                            <div class="hologram-face"></div>
+                        </div>
+                    </div>
+                    <div class="holo-controls">
+                        <button class="holo-btn" id="rotateLeft"><i class="fas fa-chevron-left"></i></button>
+                        <button class="holo-btn" id="rotateRight"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Quantum Personalization Section -->
+        <section class="quantum-personalization">
+            <div class="container">
+                <h2 class="section-title">Your Personal Ayurvedic Quantum Profile</h2>
+                <div class="quantum-scanner">
+                    <div class="scanner-interface">
+                        <div class="biometric-scanner" id="biometricScanner">
+                            <div class="scanner-ring"></div>
+                            <div class="scanner-pulse"></div>
+                            <div class="scanner-wave"></div>
+                            <div class="scanner-grid"></div>
+                        </div>
+                        <p class="scanner-instruction">Place your hand to scan your biometric data</p>
+                        <div class="scanner-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                            <span class="progress-text">Ready to scan</span>
+                        </div>
+                    </div>
+                    <div class="dosha-analysis">
+                        <div class="dosha-viz">
+                            <div class="dosha-circle vata">
+                                <div class="dosha-icon">V</div>
+                                <div class="dosha-value">45%</div>
+                            </div>
+                            <div class="dosha-circle pitta">
+                                <div class="dosha-icon">P</div>
+                                <div class="dosha-value">30%</div>
+                            </div>
+                            <div class="dosha-circle kapha">
+                                <div class="dosha-icon">K</div>
+                                <div class="dosha-value">25%</div>
+                            </div>
+                        </div>
+                        <div class="dosha-results">
+                            <h3>Your Dosha Composition</h3>
+                            <div class="dosha-bar vata">
+                                <div class="dosha-fill" style="width: 0%"></div>
+                                <span>Vata: 45%</span>
+                            </div>
+                            <div class="dosha-bar pitta">
+                                <div class="dosha-fill" style="width: 0%"></div>
+                                <span>Pitta: 30%</span>
+                            </div>
+                            <div class="dosha-bar kapha">
+                                <div class="dosha-fill" style="width: 0%"></div>
+                                <span>Kapha: 25%</span>
+                            </div>
+                            <div class="dosha-recommendations">
+                                <h4>Personalized Recommendations</h4>
+                                <ul>
+                                    <li>Ashwagandha for stress relief</li>
+                                    <li>Brahmi for mental clarity</li>
+                                    <li>Triphala for digestion</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Holographic Product Showcase -->
+        <section class="holo-showcase">
+            <div class="container">
+                <h2 class="section-title">Experience Our Products in Holographic 3D</h2>
+                <div class="holo-grid">
+                    <div class="holo-product-card">
+                        <div class="holo-viewer" data-product="ashwagandha">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1600870299940-3a9a0e7e7a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ashwagandha">
+                                <div class="product-badge">Bestseller</div>
+                            </div>
+                            <div class="holo-controls">
+                                <button class="view-3d"><i class="fas fa-cube"></i> View 3D</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Ashwagandha Root</h3>
+                            <p>Premium adaptogen for stress relief</p>
+                            <div class="product-meta">
+                                <span class="price">₹499</span>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                            <button class="add-to-cart" data-product="ashwagandha" data-price="499">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="holo-product-card">
+                        <div class="holo-viewer" data-product="triphala">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1590598169071-eb016b4b8a3a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Triphala">
+                                <div class="product-badge">Organic</div>
+                            </div>
+                            <div class="holo-controls">
+                                <button class="view-3d"><i class="fas fa-cube"></i> View 3D</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Triphala Churna</h3>
+                            <p>Ancient detox formula</p>
+                            <div class="product-meta">
+                                <span class="price">₹399</span>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>4.0</span>
+                                </div>
+                            </div>
+                            <button class="add-to-cart" data-product="triphala" data-price="399">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="holo-product-card">
+                        <div class="holo-viewer" data-product="brahmi">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Brahmi">
+                                <div class="product-badge">New</div>
+                            </div>
+                            <div class="holo-controls">
+                                <button class="view-3d"><i class="fas fa-cube"></i> View 3D</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Brahmi Capsules</h3>
+                            <p>Cognitive enhancement formula</p>
+                            <div class="product-meta">
+                                <span class="price">₹599</span>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>5.0</span>
+                                </div>
+                            </div>
+                            <button class="add-to-cart" data-product="brahmi" data-price="599">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="view-all-products">
+                    <a href="/ayurveda_shop/shop.html" class="cta-button primary">View All Products</a>
+                </div>
+            </div>
+        </section>
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Revolutionary Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Neural Interface</h3>
+                        <p>Connect your mind directly to ancient wisdom through brain-computer interfaces</p>
+                        <div class="feature-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 95%"></div>
+                            </div>
+                            <span>95% Accuracy</span>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-atom"></i>
+                        </div>
+                        <h3>Quantum Computing</h3>
+                        <p>AI-powered Ayurvedic recommendations based on your unique constitution</p>
+                        <div class="feature-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 90%"></div>
+                            </div>
+                            <span>90% Precision</span>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <h3>Blockchain Transparency</h3>
+                        <p>Track every herb from farm to your home with immutable blockchain records</p>
+                        <div class="feature-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%"></div>
+                            </div>
+                            <span>100% Traceable</span>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-vr-cardboard"></i>
+                        </div>
+                        <h3>AR Consultations</h3>
+                        <p>Virtual consultations with Vaidyas in augmented reality</p>
+                        <div class="feature-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%"></div>
+                            </div>
+                            <span>85% Realism</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">What People Say</h2>
+                <div class="testimonial-slider" id="testimonialSlider">
+                    <div class="testimonial-card active">
+                        <div class="testimonial-content">
+                            <p>"The neural interface completely changed how I understand my body. Amazing technology!"</p>
+                            <div class="testimonial-author">
+                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Priya Sharma">
+                                <div class="author-info">
+                                    <h4>Priya Sharma</h4>
+                                    <p>Wellness Coach</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Finally, authentic Ayurveda I can trust. The blockchain tracking is brilliant."</p>
+                            <div class="testimonial-author">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Raj Patel">
+                                <div class="author-info">
+                                    <h4>Raj Patel</h4>
+                                    <p>Software Engineer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"The quantum recommendations are spot on. I feel better than ever!"</p>
+                            <div class="testimonial-author">
+                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Ananya Reddy">
+                                <div class="author-info">
+                                    <h4>Ananya Reddy</h4>
+                                    <p>Yoga Instructor</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-controls">
+                    <button class="testimonial-prev"><i class="fas fa-chevron-left"></i></button>
+                    <div class="testimonial-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="testimonial-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+        <!-- Blog Section -->
+        <section class="blog">
+            <div class="container">
+                <h2 class="section-title">Latest from Our Blog</h2>
+                <div class="blog-grid">
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1590987427114-5e6e5e5e5e5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ayurveda and Technology">
+                            <div class="blog-category">Technology</div>
+                        </div>
+                        <div class="blog-content">
+                            <h3>How Quantum Computing is Revolutionizing Ayurveda</h3>
+                            <p>Exploring the intersection of ancient wisdom and cutting-edge technology...</p>
+                            <div class="blog-meta">
+                                <span><i class="far fa-calendar"></i> May 15, 2023</span>
+                                <span><i class="far fa-comment"></i> 12 Comments</span>
+                            </div>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ayurvedic Herbs">
+                            <div class="blog-category">Herbs</div>
+                        </div>
+                        <div class="blog-content">
+                            <h3>Top 10 Ayurvedic Herbs for Modern Life</h3>
+                            <p>Discover the most powerful herbs that can transform your health and wellbeing...</p>
+                            <div class="blog-meta">
+                                <span><i class="far fa-calendar"></i> May 10, 2023</span>
+                                <span><i class="far fa-comment"></i> 8 Comments</span>
+                            </div>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Meditation">
+                            <div class="blog-category">Wellness</div>
+                        </div>
+                        <div class="blog-content">
+                            <h3>The Science Behind Ayurvedic Meditation</h3>
+                            <p>How ancient meditation techniques are being validated by modern science...</p>
+                            <div class="blog-meta">
+                                <span><i class="far fa-calendar"></i> May 5, 2023</span>
+                                <span><i class="far fa-comment"></i> 15 Comments</span>
+                            </div>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="view-all-blog">
+                    <a href="#" class="cta-button secondary">View All Articles</a>
+                </div>
+            </div>
+        </section>
+        <!-- Special Offers Section -->
+        <section class="special-offers">
+            <div class="container">
+                <h2 class="section-title">Special Offers</h2>
+                <div class="offers-container">
+                    <div class="offer-card">
+                        <div class="offer-badge">25% OFF</div>
+                        <div class="offer-content">
+                            <h3>Wellness Starter Kit</h3>
+                            <p>Complete package for beginners</p>
+                            <div class="offer-price">
+                                <span class="original-price">₹1999</span>
+                                <span class="discount-price">₹1499</span>
+                            </div>
+                            <button class="cta-button primary">Shop Now</button>
+                        </div>
+                    </div>
+                    <div class="offer-card">
+                        <div class="offer-badge">Buy 2 Get 1</div>
+                        <div class="offer-content">
+                            <h3>Immunity Boosters</h3>
+                            <p>Strengthen your natural defenses</p>
+                            <div class="offer-price">
+                                <span class="original-price">₹1497</span>
+                                <span class="discount-price">₹998</span>
+                            </div>
+                            <button class="cta-button primary">Shop Now</button>
+                        </div>
+                    </div>
+                    <div class="offer-card">
+                        <div class="offer-badge">Free Shipping</div>
+                        <div class="offer-content">
+                            <h3>Stress Relief Bundle</h3>
+                            <p>Calm your mind and body</p>
+                            <div class="offer-price">
+                                <span class="original-price">₹1299</span>
+                                <span class="discount-price">₹1099</span>
+                            </div>
+                            <button class="cta-button primary">Shop Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Transform Your Wellness Journey?</h2>
+                    <p>Join thousands who have already experienced the future of Ayurveda</p>
+                    <div class="cta-buttons">
+                        <button class="cta-button primary" id="getStarted">Get Started</button>
+                        <button class="cta-button secondary" id="learnMore">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AyurVeda Nexus</h3>
+                    <p>The future of authentic Ayurveda through quantum technology and neural interfaces</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/alone_boy_.420/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/ayurveda_shop/index.html">Home</a></li>
+                        <li><a href="/ayurveda_shop/shop.html">Shop</a></li>
+                        <li><a href="/ayurveda_shop/about.html">About</a></li>
+                        <li><a href="/ayurveda_shop/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#">Herbs & Powders</a></li>
+                        <li><a href="#">Oils & Balms</a></li>
+                        <li><a href="#">Teas & Kadhas</a></li>
+                        <li><a href="#">Wellness Kits</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get the latest updates and offers</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 AyurVeda Nexus. All rights reserved.</p>
+                <div class="certifications">
+                    <span>ISO</span>
+                    <span>FSSAI</span>
+                    <span>Organic</span>
+                    <span>Ayush</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Shopping Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Your Shopping Cart</h3>
+                <button class="close-cart" id="closeCart">&times;</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <div class="cart-summary">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotal">₹0</span>
+                </div>
+                <button class="cta-button primary checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+    <!-- 3D Product Viewer Modal -->
+    <div class="product-viewer-modal" id="productViewerModal">
+        <div class="viewer-content">
+            <div class="viewer-header">
+                <h3>3D Product Viewer</h3>
+                <button class="close-viewer" id="closeViewer">&times;</button>
+            </div>
+            <div class="viewer-container">
+                <div class="product-3d-viewer" id="product3dViewer">
+                    <!-- 3D product will be displayed here -->
+                </div>
+                <div class="viewer-controls">
+                    <button class="viewer-btn" id="zoomIn"><i class="fas fa-search-plus"></i></button>
+                    <button class="viewer-btn" id="zoomOut"><i class="fas fa-search-minus"></i></button>
+                    <button class="viewer-btn" id="resetView"><i class="fas fa-sync-alt"></i></button>
+                </div>
+            </div>
+            <div class="viewer-info">
+                <h4 id="viewerProductName">Product Name</h4>
+                <p id="viewerProductDesc">Product description</p>
+                <div class="viewer-price">
+                    <span id="viewerProductPrice">₹0</span>
+                    <button class="add-to-cart" id="viewerAddToCart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

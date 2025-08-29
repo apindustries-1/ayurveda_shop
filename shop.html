@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - AyurVeda Nexus</title>
+    <meta name="description" content="Authentic Ayurvedic remedies, verified by Vaidyas and delivered to your doorstep">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader-inner">
+                <div class="loader-circle"></div>
+                <div class="loader-circle"></div>
+                <div class="loader-circle"></div>
+            </div>
+            <p>Loading Products...</p>
+        </div>
+    </div>
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>AyurVeda <span>Nexus</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/ayurveda_shop/index.html">Home</a></li>
+                <li><a href="/ayurveda_shop/shop.html" class="active">Shop</a></li>
+                <li><a href="/ayurveda_shop/about.html">About</a></li>
+                <li><a href="/ayurveda_shop/contact.html">Contact</a></li>
+                <li class="nav-cart">
+                    <a href="#" class="cart-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    <!-- Main Content -->
+    <main>
+        <!-- Shop Hero Section -->
+        <section class="shop-hero">
+            <div class="container">
+                <h1>Our Products</h1>
+                <p>Authentic Ayurvedic remedies, verified by Vaidyas and delivered to your doorstep</p>
+                <div class="shop-search">
+                    <form class="search-form" id="searchForm">
+                        <input type="text" placeholder="Search products..." id="searchInput">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- Shop Filters Section -->
+        <section class="shop-filters">
+            <div class="container">
+                <div class="filters-container">
+                    <div class="filter-group">
+                        <h3>Categories</h3>
+                        <ul>
+                            <li><a href="#" class="filter-category active" data-category="all">All Products</a></li>
+                            <li><a href="#" class="filter-category" data-category="herbs">Herbs & Powders</a></li>
+                            <li><a href="#" class="filter-category" data-category="oils">Oils & Balms</a></li>
+                            <li><a href="#" class="filter-category" data-category="teas">Teas & Kadhas</a></li>
+                            <li><a href="#" class="filter-category" data-category="kits">Wellness Kits</a></li>
+                        </ul>
+                    </div>
+                    <div class="filter-group">
+                        <h3>Price Range</h3>
+                        <div class="price-slider">
+                            <input type="range" min="0" max="1000" value="500" class="slider" id="priceSlider">
+                            <div class="price-values">
+                                <span>₹0</span>
+                                <span id="priceValue">₹500</span>
+                                <span>₹1000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <h3>Dosha Type</h3>
+                        <ul>
+                            <li><a href="#" class="filter-dosha" data-dosha="vata">Vata</a></li>
+                            <li><a href="#" class="filter-dosha" data-dosha="pitta">Pitta</a></li>
+                            <li><a href="#" class="filter-dosha" data-dosha="kapha">Kapha</a></li>
+                        </ul>
+                    </div>
+                    <div class="filter-group">
+                        <h3>Sort By</h3>
+                        <select id="sortSelect">
+                            <option value="popularity">Popularity</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="newest">Newest First</option>
+                            <option value="rating">Highest Rated</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Products Section -->
+        <section class="products-section">
+            <div class="container">
+                <div class="products-header">
+                    <h2>Products</h2>
+                    <div class="products-view-toggle">
+                        <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i></button>
+                        <button class="view-btn" data-view="list"><i class="fas fa-list"></i></button>
+                    </div>
+                </div>
+                <div class="products-grid" id="productsGrid">
+                    <div class="product-card" data-category="herbs" data-price="499" data-dosha="vata" data-rating="4.5">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1600870299940-3a9a0e7e7a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ashwagandha">
+                            <div class="product-badge">Bestseller</div>
+                            <div class="product-overlay">
+                                <button class="quick-view"><i class="fas fa-eye"></i></button>
+                                <button class="view-3d"><i class="fas fa-cube"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Ashwagandha Root</h3>
+                            <p>Premium adaptogen for stress relief and vitality</p>
+                            <div class="product-meta">
+                                <div class="price">₹499</div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                            <button class="add-to-cart" data-product="ashwagandha" data-price="499">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="teas" data-price="299" data-dosha="pitta" data-rating="4.0">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1590598169071-eb016b4b8a3a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tulsi">
+                            <div class="product-badge">Organic</div>
+                            <div class="product-overlay">
+                                <button class="quick-view"><i class="fas fa-eye"></i></button>
+                                <button class="view-3d"><i class="fas fa-cube"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Tulsi Tea</h3>
+                            <p>Sacred basil for immunity boost and respiratory health</p>
+                            <div class="product-meta">
+                                <div class="price">₹299</div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>4.0</span>
+                                </div>
+                            </div>
+                            <button class="add-to-cart" data-product="tulsi" data-price="299">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="oils" data-price="599" data-dosha="vata" data-rating="5.0">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Brahmi Oil">
+                            <div class="product-badge">Premium</div>
+                            <div class="product-overlay">
+                                <button class="quick-view"><i class="fas fa-eye"></i></button>
+                                <button class="view-3d"><i class="fas fa-cube"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Brahmi Oil</h3>
+                            <p>Cognitive enhancement formula for mental clarity</p>
+                            <div class="product-meta">
+                                <div class="price">₹599</div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>5.0</span>
+                                </div>
+                            </div>
+                            <button class="add-to-cart" data-product="brahmi-oil" data-price="599">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="herbs" data-price="399" data-dosha="kapha" data-rating="4.5">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1590987427114-5e6e5e5e5e5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Triphala">
+                            <div class="product-badge">Classic</div>
+                            <div class="product-overlay">
+                                <button class="quick-view"><i class="fas fa-eye"></i></button>
+                                <button class="view-3d"><i class="fas fa-cube"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Triphala Churna</h3>
+                            <p>Ancient detox formula for digestive health</p>
+                            <div class="product-meta">
+                                <div class="price">₹399</div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                            <button class="add-to-cart" data-product="triphala" data-price="399">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="herbs" data-price="349" data-dosha="pitta" data-rating="4.0">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1590987427114-5e6e5e5e5e5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Neem">
+                            <div class="product-badge">Natural</div>
+                            <div class="product-overlay">
+                                <button class="quick-view"><i class="fas fa-eye"></i></button>
+                                <button class="view-3d"><i class="fas fa-cube"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Neem Capsules</h3>
+                            <p>Purifying herb for skin health and immunity</p>
+                            <div class="product-meta">
+                                <div class="price">₹349</div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>4.0</span>
+                                </div>
+                            </div>
+                            <button class="add-to-cart" data-product="neem" data-price="349">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="herbs" data-price="449" data-dosha="vata" data-rating="4.5">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1590987427114-5e6e5e5e5e5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Turmeric">
+                            <div class="product-badge">Enhanced</div>
+                            <div class="product-overlay">
+                                <button class="quick-view"><i class="fas fa-eye"></i></button>
+                                <button class="view-3d"><i class="fas fa-cube"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Turmeric Plus</h3>
+                            <p>Enhanced absorption formula for inflammation</p>
+                            <div class="product-meta">
+                                <div class="price">₹449</div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                            <button class="add-to-cart" data-product="turmeric" data-price="449">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="oils" data-price="699" data-dosha="pitta" data-rating="5.0">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1590987427114-5e6e5e5e5e5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sandalwood">
+                            <div class="product-badge">Luxury</div>
+                            <div class="product-overlay">
+                                <button class="quick-view"><i class="fas fa-eye"></i></button>
+                                <button class="view-3d"><i class="fas fa-cube"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Sandalwood Oil</h3>
+                            <p>Pure essential oil for relaxation and meditation</p>
+                            <div class="product-meta">
+                                <div class="price">₹699</div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>5.0</span>
+                                </div>
+                            </div>
+                            <button class="add-to-cart" data-product="sandalwood" data-price="699">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="kits" data-price="1299" data-dosha="all" data-rating="4.8">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1590987427114-5e6e5e5e5e5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Wellness Kit">
+                            <div class="product-badge">Complete</div>
+                            <div class="product-overlay">
+                                <button class="quick-view"><i class="fas fa-eye"></i></button>
+                                <button class="view-3d"><i class="fas fa-cube"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Wellness Starter Kit</h3>
+                            <p>Complete package for beginners</p>
+                            <div class="product-meta">
+                                <div class="price">₹1299</div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.8</span>
+                                </div>
+                            </div>
+                            <button class="add-to-cart" data-product="wellness-kit" data-price="1299">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagination">
+                    <button class="prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="page active">1</button>
+                    <button class="page">2</button>
+                    <button class="page">3</button>
+                    <button class="next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2>Stay Updated</h2>
+                    <p>Subscribe to our newsletter for the latest products and exclusive offers</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AyurVeda Nexus</h3>
+                    <p>The future of authentic Ayurveda through quantum technology and neural interfaces</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/alone_boy_.420/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/ayurveda_shop/index.html">Home</a></li>
+                        <li><a href="/ayurveda_shop/shop.html">Shop</a></li>
+                        <li><a href="/ayurveda_shop/about.html">About</a></li>
+                        <li><a href="/ayurveda_shop/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#">Herbs & Powders</a></li>
+                        <li><a href="#">Oils & Balms</a></li>
+                        <li><a href="#">Teas & Kadhas</a></li>
+                        <li><a href="#">Wellness Kits</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get the latest updates and offers</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 AyurVeda Nexus. All rights reserved.</p>
+                <div class="certifications">
+                    <span>ISO</span>
+                    <span>FSSAI</span>
+                    <span>Organic</span>
+                    <span>Ayush</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Shopping Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Your Shopping Cart</h3>
+                <button class="close-cart" id="closeCart">&times;</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <div class="cart-summary">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotal">₹0</span>
+                </div>
+                <button class="cta-button primary checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+    <!-- 3D Product Viewer Modal -->
+    <div class="product-viewer-modal" id="productViewerModal">
+        <div class="viewer-content">
+            <div class="viewer-header">
+                <h3>3D Product Viewer</h3>
+                <button class="close-viewer" id="closeViewer">&times;</button>
+            </div>
+            <div class="viewer-container">
+                <div class="product-3d-viewer" id="product3dViewer">
+                    <!-- 3D product will be displayed here -->
+                </div>
+                <div class="viewer-controls">
+                    <button class="viewer-btn" id="zoomIn"><i class="fas fa-search-plus"></i></button>
+                    <button class="viewer-btn" id="zoomOut"><i class="fas fa-search-minus"></i></button>
+                    <button class="viewer-btn" id="resetView"><i class="fas fa-sync-alt"></i></button>
+                </div>
+            </div>
+            <div class="viewer-info">
+                <h4 id="viewerProductName">Product Name</h4>
+                <p id="viewerProductDesc">Product description</p>
+                <div class="viewer-price">
+                    <span id="viewerProductPrice">₹0</span>
+                    <button class="add-to-cart" id="viewerAddToCart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
